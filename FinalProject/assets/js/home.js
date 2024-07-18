@@ -1,6 +1,44 @@
 
 
-$(document).ready(function() {
+$(function() {
+
+    //#region OnTop
+    var progressPath = document.querySelector('.progress-wrap path');
+    var pathLength = progressPath.getTotalLength();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+    progressPath.style.strokeDashoffset = pathLength;
+    progressPath.getBoundingClientRect();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+    var updateProgress = function () {
+        var scroll = $(window).scrollTop();
+        var height = $(document).height() - $(window).height();
+        var progress = pathLength - (scroll * pathLength / height);
+        progressPath.style.strokeDashoffset = progress;
+    }
+    updateProgress();
+    $(window).scroll(updateProgress);
+    var offset = 150;
+    var duration = 550;
+    jQuery(window).on('scroll', function () {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.progress-wrap').addClass('active-progress');
+        } else {
+            jQuery('.progress-wrap').removeClass('active-progress');
+        }
+    });
+    jQuery('.progress-wrap').on('click', function (event) {
+        event.preventDefault();
+        jQuery('html, body').animate({
+            scrollTop: 0
+        }, duration);
+        return false;
+    })
+    //#endregion
+
+
+
+    //#region Slider
     $('#kenburnsSliderContainer').vegas({
         slides: [{
             src: "assets/images/slider/1.jpg"
@@ -18,10 +56,25 @@ $(document).ready(function() {
         delay: 10000,
         animationDuration: 20000
     });
+    //#endregion
 
 
+    //#region HeaderScroll
+    $(window).on("scroll", function () {
+        var bodyScroll = $(this).scrollTop(),
+          navbar = $(".navbar");
+        if (bodyScroll > 100) {
+          navbar.addClass("nav-scroll");
+        } else {
+          navbar.removeClass("nav-scroll");
+        }
+      })
+    //#endregion
 
-    // ScrollIt *
+    
+
+    //#region Scrollit
+    
     $.scrollIt({
         upKey: 38, // key code to navigate to the next section
         downKey: 40, // key code to navigate to the previous section
@@ -31,6 +84,8 @@ $(document).ready(function() {
         onPageChange: null, // function(pageIndex) that is called when page is changed
         topOffset: -70 // offste (in px) for fixed top navigation
     })
+    //#endregion
+  
 
     
 

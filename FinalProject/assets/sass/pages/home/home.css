@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: MyFont;
   src: url(../../../fonts/icomoon.ttf);
@@ -6,9 +7,67 @@
   font-family: Outfit;
   src: url(../../../fonts/Outfit-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: Theimfy;
+  src: url(../../../fonts/themify.woff);
+}
 .container-main {
   width: 74%;
   margin: 0 auto;
+}
+
+body {
+  background: #f5eee7;
+}
+
+.progress-wrap {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 400ms linear;
+  box-shadow: inset 0 0 0 0px rgba(217, 214, 209, 0.5);
+}
+.progress-wrap::after {
+  position: absolute;
+  font-family: Themify;
+  content: "✂";
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+  font-weight: normal;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+  transition: all 400ms linear;
+  color: #91765a;
+}
+.progress-wrap svg path {
+  fill: none;
+}
+.progress-wrap svg.progress-circle path {
+  stroke-width: 4;
+  box-sizing: border-box;
+  transition: all 400ms linear;
+  stroke: #91765a;
+}
+
+.progress-wrap.active-progress {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .navbar {
@@ -437,4 +496,140 @@
   90% {
     transform: translate3d(0, -4px, 0);
   }
+}
+#about {
+  padding-top: 120px;
+  font-family: OutFit;
+}
+#about .list-about li {
+  display: flex;
+  align-items: center;
+}
+#about .list-about .list-icon {
+  display: flex;
+  align-items: center;
+}
+#about .list-about .list-icon i {
+  font-size: 12px;
+  color: #91765a;
+}
+#about .list-about .list-text {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+#about .list-about .list-text p {
+  font-size: 15px;
+  margin: 0px;
+}
+#about h6 {
+  margin-left: 2px;
+  color: #91765a;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+#about h3 {
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  color: #14100c;
+}
+#about p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #625c56;
+  margin-bottom: 15px;
+}
+#about .first-image {
+  width: 261px;
+  height: 335px;
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+#about .second-image {
+  width: 261px;
+  height: 335px;
+}
+
+#services .service-cart {
+  margin-top: 110px;
+  display: flex;
+}
+#services .service-cart img {
+  width: 55px;
+  height: 55px;
+}
+#services .service-cart .description {
+  margin-left: 27px;
+  margin-top: -13px;
+}
+#services .service-cart .description h5 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+#services .service-cart .description p {
+  font-family: OutFit, sans-serif;
+  font-size: 15px;
+  width: 278px;
+  color: #625c56;
+}
+
+#history {
+  background: black;
+  padding-top: 120px;
+  margin-top: 120px;
+  font-family: OutFit;
+}
+#history .main-image img {
+  width: 451px;
+  height: 547px;
+}
+#history .title {
+  margin-top: 90px;
+}
+#history .title .experience {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #91765a;
+  text-transform: uppercase;
+}
+#history .title .title-desc {
+  color: white;
+  font-family: OutFit, sans-serif;
+  font-size: 48px;
+  line-height: 1.2em;
+  font-weight: 800;
+}
+#history p {
+  font-family: OutFit, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.75em;
+  color: #ABA59F;
+  margin-bottom: 15px;
+}
+#history .signature {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+#history .signature img {
+  width: 70px;
+}
+#history .signature .name-about {
+  margin: 30px 0;
+}
+#history .signature .name-about .position {
+  font-size: 15px;
+  color: #aba59f;
+}
+#history .signature .name-about .name {
+  font-family: OutFit, sans-serif;
+  font-size: 15px;
+  color: #91765a;
 }/*# sourceMappingURL=home.css.map */

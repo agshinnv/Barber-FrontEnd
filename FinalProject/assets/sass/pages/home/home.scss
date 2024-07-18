@@ -7,11 +7,91 @@
   font-family: Outfit;
   src: url(../../../fonts/Outfit-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: Theimfy;
+  src: url(../../../fonts/themify.woff);
+}
 
 .container-main {
   width: 74%;
   margin: 0 auto;
 }
+
+
+body{
+  background: #f5eee7;
+}
+
+
+
+.progress-wrap {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+	display: block;
+	border-radius: 50px;
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: translateY(20px);
+	-ms-transform: translateY(20px);
+	transform: translateY(20px);
+	-webkit-transition: all 400ms linear;
+	-o-transition: all 400ms linear;
+	transition: all 400ms linear;
+	-webkit-box-shadow: inset 0 0 0 0px rgba(217, 214, 209, 0.5);
+	box-shadow: inset 0 0 0 0px rgba(217, 214, 209, 0.5);
+	&::after {
+		position: absolute;
+		font-family: Themify;
+		content: '\2702';
+		text-align: center;
+		line-height: 50px;
+		font-size: 12px;
+		font-weight: normal;
+		left: 0;
+		top: 0;
+		height: 50px;
+		width: 50px;
+		cursor: pointer;
+		display: block;
+		z-index: 1;
+		-webkit-transition: all 400ms linear;
+		-o-transition: all 400ms linear;
+		transition: all 400ms linear;
+		color: #91765a;
+	}
+	svg {
+		path {
+			fill: none;
+		}
+	}
+	svg.progress-circle {
+		path {
+			stroke-width: 4;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			-webkit-transition: all 400ms linear;
+			-o-transition: all 400ms linear;
+			transition: all 400ms linear;
+			stroke: #91765a;
+		}
+	}
+}
+.progress-wrap.active-progress {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+
+
+
+
 
 .navbar {
   position: absolute;
@@ -476,6 +556,175 @@
     transform: translate3d(0, -4px, 0);
   }
 }
+
+#about{
+  padding-top: 120px;
+  font-family: OutFit;
+  .list-about{
+    li{
+      display: flex;
+      align-items: center;
+
+    }
+    .list-icon{
+      display: flex;
+      align-items: center;
+      i{
+        font-size: 12px;
+        color: #91765a;
+      }
+    }
+    .list-text{
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+      p{
+        font-size: 15px;
+        margin: 0px;
+      }
+    }
+  }
+  h6{
+    margin-left: 2px;
+    color: #91765a;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  h3{
+    font-size: 47px;
+    line-height: 48px;
+    font-weight: 800;
+    color: #14100c;
+  }
+  p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #625c56;
+    margin-bottom: 15px;
+  }
+  .first-image{
+    width: 261px;
+    height: 335px;
+    margin-top: 90px;
+    margin-bottom: 30px;
+  }
+  .second-image{
+    width: 261px;
+    height: 335px;
+  }
+}
+
+
+#services{
+  .service-cart{
+    margin-top: 110px;
+    display: flex;
+    img{
+      width: 55px;
+      height: 55px;
+    }
+    .description{
+      margin-left: 27px;
+      margin-top: -13px;
+      h5{
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      p{
+        font-family: OutFit,sans-serif;
+        font-size: 15px;
+        width: 278px;
+        color: #625c56;
+      }
+    }
+  }
+}
+
+
+#history{
+  background: black;
+  padding-top: 120px;
+  margin-top: 120px;
+  font-family: OutFit;
+  .main-image{
+    img{
+      width: 451px;
+      height: 547px;
+    }
+  }
+  .title{
+    margin-top: 90px;
+    .experience{
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #91765a;
+      text-transform: uppercase;
+    }
+    .title-desc{
+      color: white;
+      font-family: OutFit, sans-serif;
+      font-size: 48px;
+      line-height: 1.2em;
+      font-weight: 800;
+    }
+  }
+  p{
+    font-family: OutFit, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.75em;
+    color: #ABA59F;
+    margin-bottom: 15px;
+  }
+  .signature{
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    img{
+      width: 70px;
+    }
+    .name-about{
+      margin: 30px 0;
+      .position{
+        font-size: 15px;
+        color: #aba59f;
+      }
+      .name{
+        font-family: OutFit,sans-serif;
+        font-size: 15px;
+        color: #91765a;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // @media screen and (min-width: 992px) {
 //   .navbar {
