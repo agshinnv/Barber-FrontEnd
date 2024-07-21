@@ -342,6 +342,141 @@ body {
   }
 }
 
+#banner-header {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  .cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    background: #000;
+  }
+  h5 {
+    position: relative;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+    font-family: OutFit, sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  h1 {
+    position: relative;
+    font-size: 60px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 800;
+  }
+  .caption {
+    text-align: center;
+    margin-top: 60px;
+  }
+}
+
+#barber-pricing {
+  padding: 120px 0;
+  .image {
+    overflow: hidden;
+    position: relative;
+    height: 380px;
+    width: 575px;
+    &:hover img {
+      -webkit-filter: none;
+      filter: none;
+      -webkit-transform: scale(1.09, 1.09);
+      transform: scale(1.09, 1.09);
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+    a {
+      text-decoration: none;
+      display: inline-block;
+      color: inherit;
+      img {
+        transition: transform 0.5s;
+        height: auto;
+        width: 100%;
+      }
+      .name {
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        h2 {
+          color: #fff;
+          font-size: 48px;
+          line-height: 48px;
+          margin-bottom: 0px;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+  .content {
+    padding: 30px;
+    width: 100%;
+    .content-list {
+      margin-bottom: 30px;
+      .item {
+        line-height: 35px;
+        .title {
+          display: flex;
+          h2 {
+            flex-shrink: 0;
+            color: #14100c;
+            font-family: OutFit, sans-serif;
+            font-size: 17px;
+            font-weight: 800;
+            margin-top: 11px;
+          }
+          .dots {
+            width: 100%;
+            position: relative;
+            margin: 0 20px;
+            &::after {
+              content: "";
+              width: 100%;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              border-bottom: 1px dashed rgba(145, 118, 90, 0.3);
+            }
+          }
+          p {
+            margin-left: auto;
+            font-weight: 800;
+            color: #91765a;
+            font-size: 17px;
+          }
+        }
+        p {
+          font-family: OutFit, sans-serif;
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 1.75em;
+          color: #625c56;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
 #slider {
   .vegas-content-scrollable {
     display: flex;
@@ -926,8 +1061,8 @@ body {
 
 #features {
   padding-top: 120px;
+  margin-top: 120px;
   position: relative;
-  position: -webkit-sticky;
   .title {
     margin-bottom: 45ps;
     text-align: center;
@@ -2286,7 +2421,6 @@ body {
   }
 }
 
-
 #colleagues {
   background: #91765a;
   padding-top: 20px;
@@ -2299,40 +2433,39 @@ body {
     line-height: 0;
   }
   .clients-logor {
-    &:hover{
+    &:hover {
       opacity: 1;
     }
   }
 }
 
-
-.footer{
+.footer {
   position: relative;
   display: block;
-  .footer-up{
+  .footer-up {
     position: relative;
     display: block;
     background-color: #14100c;
     padding: 90px 0 60px 0;
     z-index: 1;
     border-top: 1px solid rgba(255, 255, 255, 0.04);
-    .contact-column{
+    .contact-column {
       margin-bottom: 30px;
-      h3{
+      h3 {
         font-family: OutFit, sans-serif;
         color: #fff;
         font-size: 27px;
         font-weight: 800;
         margin-bottom: 15px;
       }
-      p{
+      p {
         color: #aba59f;
         font-size: 15px;
         margin: 0;
         padding-bottom: 15px;
       }
-      .info{
-        .phone{
+      .info {
+        .phone {
           font-family: OutFit, sans-serif;
           font-size: 24px;
           color: #91765a;
@@ -2340,11 +2473,11 @@ body {
           display: block;
           -webkit-transition: all 500ms ease;
           transition: all 500ms ease;
-          &:hover{
+          &:hover {
             color: #fff;
           }
         }
-        .email{
+        .email {
           font-size: 15px;
           line-height: 3em;
           color: #aba59f;
@@ -2352,19 +2485,19 @@ body {
           display: inline-block;
           -webkit-transition: all 500ms ease;
           transition: all 500ms ease;
-          &:hover{
+          &:hover {
             color: #fff;
           }
         }
       }
-      .social{
-          display: flex;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
-          margin-top: 20px;
-          gap: 15px;
-        a{
+      .social {
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-top: 20px;
+        gap: 15px;
+        a {
           display: flex;
           -webkit-box-align: center;
           -ms-flex-align: center;
@@ -2377,37 +2510,37 @@ body {
           background-color: transparent;
           transition: all 500ms ease;
           text-decoration: none;
-          &:hover{
+          &:hover {
             background-color: transparent;
             color: #fff;
           }
         }
       }
     }
-    .work-time{
-      h3{
-        font-family: OutFit,sans-serif;
+    .work-time {
+      h3 {
+        font-family: OutFit, sans-serif;
         font-size: 27px;
         font-weight: 800;
         color: #fff;
         margin-bottom: 15px;
         white-space: nowrap;
       }
-      ul{
+      ul {
         margin: 0;
         padding: 0;
         margin-bottom: 30px;
-        li{
+        li {
           margin-bottom: 15px;
           font-size: 15px;
           list-style: none;
-          .days{
+          .days {
             display: table-cell;
             white-space: nowrap;
             padding-right: 10px;
             color: #aba59f;
           }
-          .dots{
+          .dots {
             height: 4px;
             width: 100%;
             border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
@@ -2416,7 +2549,7 @@ body {
             display: table-cell;
             white-space: nowrap;
           }
-          span{
+          span {
             white-space: nowrap;
             padding-left: 10px;
             font-family: OutFit, sans-serif;
@@ -2426,25 +2559,25 @@ body {
         }
       }
     }
-    .subscribe{
+    .subscribe {
       margin-bottom: 30px;
-      h3{
+      h3 {
         font-size: 27px;
         color: #fff;
         margin-bottom: 15px;
         font-weight: 800;
       }
-      .content{
-        p{
+      .content {
+        p {
           color: #aba59f;
           font-size: 15px;
           margin: 0;
           padding-bottom: 15px;
         }
-        form{
+        form {
           margin-top: 30px;
           position: relative;
-          input{
+          input {
             width: 100%;
             padding: 16px 60px 17px 16px;
             background-color: transparent;
@@ -2454,7 +2587,7 @@ body {
             margin-bottom: 15px;
             outline: none;
           }
-          button{
+          button {
             background-color: #91765a;
             padding: 17px 20px;
             border-radius: 0px;
@@ -2471,7 +2604,7 @@ body {
             text-transform: uppercase;
             outline: none;
             transition: all 0.3s ease-out;
-            &:hover{
+            &:hover {
               background-color: #fff;
               color: #14100c;
               outline: none;
@@ -2481,7 +2614,7 @@ body {
       }
     }
   }
-  .footer-bottom{
+  .footer-bottom {
     position: relative;
     display: block;
     background-color: #14100c;
@@ -2489,8 +2622,8 @@ body {
     box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.04);
     padding: 32px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.04);
-    .content{
-      p{
+    .content {
+      p {
         font-size: 12px;
         color: #aba59f;
         margin: 0;
@@ -2499,32 +2632,14 @@ body {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
   .history {
-    img{
+    img {
       margin-bottom: 90px;
       padding: 35px 20px;
     }
-
   }
 }
-
-
-
-
 
 @media screen and (max-width: 991px) {
   .content-box {
