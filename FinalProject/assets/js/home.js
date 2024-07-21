@@ -73,8 +73,7 @@ $(function() {
 
     
 
-    //#region Scrollit
-    
+    //#region Scrollit    
     $.scrollIt({
         upKey: 38, // key code to navigate to the next section
         downKey: 40, // key code to navigate to the previous section
@@ -86,6 +85,89 @@ $(function() {
     })
     //#endregion
   
+
+
+    //#region Testimonials
+    $('.content .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        mouseDrag: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        dots: false,
+        nav: false,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });
+    //#endregion
+
+
+
+    //#region Features
+    $('#features .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        mouseDrag: true,
+        autoplay: false,
+        dots: true,
+        autoplayHoverPause: true,
+        nav: false,
+        navText: ["<span class='lnr ti-angle-left'></span>", "<span class='lnr ti-angle-right'></span>"],
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+    //#endregion
+
+    //#region Video
+    // $("a.video").YouTubePopUp();
+    //#endregion
+
+
+    //#region TeamSlider
+    $('#team .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        dots: false,
+        mouseDrag: true,
+
+        nav: false,
+        navText: ["<span class='lnr ti-angle-left'></span>", "<span class='lnr ti-angle-right'></span>"],
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+    //#endregion
+
+
 
     
 
