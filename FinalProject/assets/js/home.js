@@ -147,6 +147,8 @@ $(function() {
     $('#team .owl-carousel').owlCarousel({
         loop: true,
         margin: 30,
+        autoplay: true,
+        autoplayTimeout: 2000,
         dots: false,
         mouseDrag: true,
 
@@ -169,7 +171,55 @@ $(function() {
 
 
 
+    //#region News&Blog
+    $('#news .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        mouseDrag: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        dots: true,
+        nav: false,
+        navText: ["<span class='lnr ti-angle-left'></span>", "<span class='lnr ti-angle-right'></span>"],
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 2
+            }
+        }
+    });
+    //#endregion
     
+
+    //#region Colleagues
+    $('#colleagues .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        mouseDrag: true,
+        autoplay: true,
+        dots: false,
+        nav: false,
+        navText: ["<span class='lnr ti-angle-left'></span>", "<span class='lnr ti-angle-right'></span>"],
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
+    //#endregion
 
 
 });
