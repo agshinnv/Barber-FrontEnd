@@ -46,7 +46,7 @@ body {
   margin-bottom: 0px;
   position: relative;
   color: #91765a;
-  line-height: 1em;
+  font-weight: 700;
 }
 #error .content h2 {
   font-size: 48px;
@@ -69,10 +69,13 @@ body {
   font-family: OutFit, sans-serif;
 }
 #error .content a {
+  font-family: OutFit, sans-serif;
+  font-weight: 900;
   color: #fff;
 }
 #error .content .btn {
   font-family: OutFit, sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
   position: relative;
   display: inline-block;
@@ -81,16 +84,14 @@ body {
   letter-spacing: 2px;
 }
 #error .content .btn::before {
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 0;
-  height: 5px;
+  height: 1px;
   background-color: #91765a;
   transition: all ease 0.4s;
-}
-#error .content .btn:hover {
-  color: green;
 }
 #error .content .btn:hover::before {
   width: 100%;
