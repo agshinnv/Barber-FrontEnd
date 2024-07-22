@@ -296,6 +296,49 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 
+#banner-header {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+#banner-header .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  background: #000;
+}
+#banner-header h5 {
+  position: relative;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 1.5em;
+  font-family: OutFit, sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+#banner-header h1 {
+  position: relative;
+  font-size: 60px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+#banner-header .caption {
+  text-align: center;
+  margin-top: 60px;
+}
+
 #slider .vegas-content-scrollable {
   display: flex;
   justify-content: center;
@@ -856,8 +899,8 @@ body {
 
 #features {
   padding-top: 120px;
+  margin-top: 120px;
   position: relative;
-  position: -webkit-sticky;
 }
 #features .title {
   margin-bottom: 45ps;
@@ -1300,7 +1343,7 @@ body {
   left: 0;
   height: 60%;
   width: 100%;
-  background: #14100c;
+  background: #f5eee7;
   z-index: -1;
 }
 #team .team-page {
@@ -2298,4 +2341,4 @@ body {
   .barber-pricing2 .content .cont h4 {
     line-height: 40px;
   }
-}/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=team.css.map */

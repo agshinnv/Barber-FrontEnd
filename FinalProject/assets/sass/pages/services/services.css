@@ -1862,7 +1862,6 @@ body {
 }
 #news .cart img {
   transition: all 0.5s;
-  -webkit-filter: brightness(100%);
 }
 #news .cart .date {
   display: inline-block;
