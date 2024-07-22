@@ -1,43 +1,55 @@
 $(function () {
   
     //#region TabMenu
-    let biographybt = $(".biography-bt");
-    let educationbt = $(".education-bt");
-    let awardsbt = $(".awards-bt");
+    // let biographybt = $(".biography-bt");
+    // let educationbt = $(".education-bt");
+    // let awardsbt = $(".awards-bt");
   
-    let tbiography = $(".biography");
-    let teducation = $(".education");
-    let tawards = $(".awards");
+    // let tbiography = $(".biography");
+    // let teducation = $(".education");
+    // let tawards = $(".awards");
   
-    $(biographybt).click(function () {
-      $(tbiography).removeClass("d-none");
-      $(teducation).addClass("d-none");
-      $(tawards).addClass("d-none");
-      $(this).css({ color: "#1e90ff" });
-      $(educationbt).css({ color: "black" });
-      $(awardsbt).css({ color: "black" });
-    });
+    // $(biographybt).click(function () {
+    //   $(tbiography).removeClass("d-none");
+    //   $(teducation).addClass("d-none");
+    //   $(tawards).addClass("d-none");
+    //   $(this).css({ color: "#1e90ff" });
+    //   $(educationbt).css({ color: "black" });
+    //   $(awardsbt).css({ color: "black" });
+    // });
   
-    $(educationbt).click(function () {
-      $(tbiography).addClass("d-none");
-      $(teducation).removeClass("d-none");
-      $(tawards).addClass("d-none");
-      $(this).css({ color: "#1e90ff" });
-      $(biographybt).css({ color: "black" });
-      $(awardsbt).css({ color: "black" });
-    });
+    // $(educationbt).click(function () {
+    //   $(tbiography).addClass("d-none");
+    //   $(teducation).removeClass("d-none");
+    //   $(tawards).addClass("d-none");
+    //   $(this).css({ color: "#1e90ff" });
+    //   $(biographybt).css({ color: "black" });
+    //   $(awardsbt).css({ color: "black" });
+    // });
   
-    $(awardsbt).click(function () {
-      $(tbiography).addClass("d-none");
-      $(teducation).addClass("d-none");
-      $(tawards).removeClass("d-none");
-      $(this).css({ color: "#1e90ff" });
-      $(biographybt).css({ color: "black" });
-      $(educationbt).css({ color: "black" });
-    });
+    // $(awardsbt).click(function () {
+    //   $(tbiography).addClass("d-none");
+    //   $(teducation).addClass("d-none");
+    //   $(tawards).removeClass("d-none");
+    //   $(this).css({ color: "#1e90ff" });
+    //   $(biographybt).css({ color: "black" });
+    //   $(educationbt).css({ color: "black" });
+    // });
     //#endregion
 
 
+    $('.tab-menu .nav-link').click(function() {
+      // Remove active class from all tabs
+      $('.tab-menu .nav-link').removeClass('active');
+      // Add active class to the clicked tab
+      $(this).addClass('active');
+
+      // Hide all tab panels
+      $('.tab-content .tab-panel').removeClass('active');
+      // Show the selected tab panel
+      var selectedTab = $(this).data('tab');
+      $('#' + selectedTab).addClass('active');
+  });
 
   //#region OnTop
   var progressPath = document.querySelector(".progress-wrap path");

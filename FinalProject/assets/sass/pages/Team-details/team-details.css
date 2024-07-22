@@ -424,8 +424,16 @@ body {
   color: #14100c;
   font-size: 18px;
 }
+#team-details .tab-menu .item .active {
+  color: #91765a;
+}
 #team-details .tab-content {
   height: 100px;
+}
+#team-details .tab-content .tab-panel {
+  transition: opacity 0.15s linear;
+  display: none;
+  opacity: 0;
 }
 #team-details .tab-content .tab-panel p {
   font-family: OutFit, sans-serif;
@@ -434,6 +442,19 @@ body {
   line-height: 1.75em;
   color: #625c56;
   margin-bottom: 15px;
+}
+#team-details .tab-content .active {
+  display: block;
+  opacity: 1;
+  animation: 0.8s fade;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #team-details .back {
   background: #fff;
