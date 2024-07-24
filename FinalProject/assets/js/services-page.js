@@ -2,6 +2,58 @@
 
 $(function() {
 
+    $('#service-list li a').click(function(e) {
+        e.preventDefault();
+
+        // Remove active class from all list items
+        $('#service-list li').removeClass('active');
+        
+        // Add active class to the clicked list item
+        $(this).parent().addClass('active');
+
+        $('.service-detail').addClass('d-none');
+
+        // Show the corresponding service detail div
+        var serviceId = $(this).attr('href');
+        $(serviceId).removeClass('d-none');
+    });
+
+    //#region Gallery
+    $('.gallery').magnificPopup({
+        delegate: '.popimg',
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
+    $(".img-zoom").magnificPopup({
+        type: "image",
+        closeOnContentClick: !0,
+        mainClass: "mfp-fade",
+        gallery: {
+            enabled: !0,
+            navigateByImgClick: !0,
+            preload: [0, 1]
+        }
+    })
+    $('.magnific-youtube, .magnific-vimeo, .magnific-custom').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 300,
+        preloader: false,
+        fixedContentPos: false
+    });
+    $('.image-popup-vertical-fit').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        mainClass: 'mfp-img-mobile',
+        image: {
+            verticalFit: true
+        }
+    });
+    //#endregion
+
     //#region OnTop
     var progressPath = document.querySelector('.progress-wrap path');
     var pathLength = progressPath.getTotalLength();
@@ -75,8 +127,8 @@ $(function() {
 
     //#region Scrollit    
     $.scrollIt({
-        upKey: 1, // key code to navigate to the next section
-        downKey: 1, // key code to navigate to the previous section
+        upKey: 38, // key code to navigate to the next section
+        downKey: 40, // key code to navigate to the previous section
         easing: 'swing', // the easing function for animation
         scrollTime: 600, // how long (in ms) the animation takes
         activeClass: 'active', // class given to the active nav element
