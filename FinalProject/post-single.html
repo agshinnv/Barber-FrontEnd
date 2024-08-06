@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="./assets/sass/pages/post-single/post-single.css">
 </head>
 <body>
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span style="display: flex; align-items: center; justify-content: center;"><img src="./assets/images/preloader.png" alt="" style="width: 80px; height: 80px;"></span> </div>
+        </div>
+    </div>
 
     <div class="progress-wrap cursor-pointer">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -37,27 +43,13 @@
                             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                             <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                            <li class="nav-item dropdown"> <a class="nav-link active dropdown-toggle" href="#">Pages <i class="fa-solid fa-angle-down"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="portfolio.html" class="dropdown-item"><span>Portfolio</span></a></li>
-                                    <li><a href="team.html" class="dropdown-item"><span>Team</span></a></li>
-                                    <li><a href="faq.html" class="dropdown-item"><span>Faq</span></a></li>
-                                    <li><a href="services-page.html" class="dropdown-item"><span>Services Page</span></a></li>
-                                    <li><a href="team-details.html" class="dropdown-item"><span>Team Details</span></a></li>
-                                    <li><a href="post-single.html" class="dropdown-item active"><span>Post Single</span></a></li>
-                                    <li><a href="404.html" class="dropdown-item"><span>404</span></a></li>
-                                    <li><a href="coming-soon.html" class="dropdown-item"><span>Coming Soon</span></a></li>
-                                </ul>
-                            </li>
                             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="login.html"><i class="login fa-solid fa-user" style="font-size: 21px; margin-left: 27px;"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-menu-icon"><i class="fa-solid fa-bars"></i></span> </button> -->
-
         </div>
     </header>   
         
@@ -70,16 +62,6 @@
                     <div class="cover"></div>
                     <div class="col-md-8 caption">
                         <h2>Women's Hair Care Routine for Any Hair Type</h2>
-                        <div class="content">
-                            <div class="author">
-                                <img src="./assets/images/Post-single/author.jpg" alt="">
-                                <p>Andreas Brown</p>
-                            </div>
-                            <div class="date">
-                                <i class="ti-calendar"></i>
-                                22 Jul 2024
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -93,10 +75,6 @@
                         <h3>Women's Hair Care Routine for Any Hair Type</h3>
                         <p>Quisque pretium fermentum quam, sit amet cursus ante sollicitudin vel. Morbi consequat risus consequat, porttitor orci sit amet, iaculis nisl. Integer quis sapien neceli ultrices euismod sit amet id lacus. Sed a imperdiet erat. Duis eu est dignissim lacus dictum hendrerit quis vitae mi. Fusce eu nulla ac nisi cursus tincidun. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer tristique sem eget leo faucibus porttitor.</p>
                         <p>Nulla vitae metus tincidunt, varius nunc quis, porta nulla. Pellentesque vel dui nec libero auctor pretium id sed arcu. Nunc consequat diam id nisl blani dinisim. Etiam commodo diam dolor, at scelerisque sem finibus sit amet. Curabitur id lectus eget purus finibus laoreet.</p>
-                        <blockquote>
-                            <p>Nulla facilisi. Sedeuter nunc vouta miss mollis sapien vel, conseyer tureution yer vintane in libero semper. Quisque ravida eros ut turpis interdum ornare. Inter miss they adama seder a imerdie fames ac ante ipsum primis in faucibus.</p>
-                            <cite>Ropert Martin</cite>
-                        </blockquote>
                         <div class="row">
                             <div class="col-md-6">
                                 <img src="./assets/images/Post-single/post1.jpg" alt="">
@@ -105,7 +83,6 @@
                                 <img src="./assets/images/Post-single/post2.jpg" alt="">
                             </div>
                         </div>
-                        <p>Design pretium fermentum quam, sit amet cursus ante sollicitudin vel. Morbi consequat risus consequat, porttitor orci sit amet, iaculis nisl. Integer quis sapien neceli ultrices euismod sit amet id lacus. Sed a imperdiet erat. Duis eu est dignissim lacus dictum hendrerit quis vitae mi. Fusce eu nulla ac nisi cursus tincidun. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer tristique sem eget leo faucibus porttitor.</p>
                     </div>
                 </div>
                 <div class="post-comment">

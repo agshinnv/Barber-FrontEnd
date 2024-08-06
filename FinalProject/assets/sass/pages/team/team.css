@@ -21,6 +21,61 @@ body {
   background: #f5eee7;
 }
 
+.preloader-bg,
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f5eee7;
+  z-index: 999999;
+}
+
+#preloader {
+  display: table;
+  table-layout: fixed;
+}
+
+#preloader-status {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.preloader-position {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.loader {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  left: 50%;
+  top: auto;
+  margin-left: -22px;
+  margin-top: 2px;
+  animation: rotate 1s infinite linear;
+}
+
+.loader span {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -2px;
+  left: -2px;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .progress-wrap {
   position: fixed;
   bottom: 20px;

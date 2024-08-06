@@ -2,6 +2,26 @@
 
 $(function() {
 
+    $('.appointment').click(function(event) {
+        // Prevent the default action (e.g., following a link)
+        event.preventDefault();
+        
+        // Smooth scroll to the #booking section
+        $('html, body').animate({
+            scrollTop: $('#appointment').offset().top
+        }, 500); // 1000ms for the animation duration
+    });
+
+    $(".navbar-toggler").click(function(){
+        $(".navbar-nav").removeClass("d-none")
+        $("#navbarCollapse").toggleClass("show");
+    });
+
+    //#region Preloader
+    $("#preloader").fadeOut(800);
+    $(".preloader-bg").delay(800).fadeOut(800);
+    //#endregion
+
     //#region OnTop
     var progressPath = document.querySelector('.progress-wrap path');
     var pathLength = progressPath.getTotalLength();
@@ -39,23 +59,23 @@ $(function() {
 
 
     //#region Slider
-    $('#kenburnsSliderContainer').vegas({
-        slides: [{
-            src: "assets/images/slider/1.jpg"
-        }, {
-            src: "assets/images/slider/2.jpg"
-        }, {
-            src: "assets/images/slider/3.jpg"
-        }, {
-            src: "assets/images/slider/4.jpg"
-        }],
-        overlay: false,
-        transition: 'fade3',
-        animation: 'kenburnsUpRight',
-        transitionDuration: 1000,
-        delay: 10000,
-        animationDuration: 20000
-    });
+    // $('#kenburnsSliderContainer').vegas({
+    //     slides: [{
+    //         src: "assets/images/slider/1.jpg"
+    //     }, {
+    //         src: "assets/images/slider/2.jpg"
+    //     }, {
+    //         src: "assets/images/slider/3.jpg"
+    //     }, {
+    //         src: "assets/images/slider/4.jpg"
+    //     }],
+    //     overlay: false,
+    //     transition: 'fade3',
+    //     animation: 'kenburnsUpRight',
+    //     transitionDuration: 1000,
+    //     delay: 10000,
+    //     animationDuration: 20000
+    // });
     //#endregion
 
 

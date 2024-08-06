@@ -1,40 +1,18 @@
 $(function () {
+
+  $('.appointment').click(function(event) {
+    // Prevent the default action (e.g., following a link)
+    event.preventDefault();
+    
+    // Smooth scroll to the #booking section
+    $('html, body').animate({
+        scrollTop: $('#appointment').offset().top
+    }, 500); // 1000ms for the animation duration
+});
   
-    //#region TabMenu
-    // let biographybt = $(".biography-bt");
-    // let educationbt = $(".education-bt");
-    // let awardsbt = $(".awards-bt");
-  
-    // let tbiography = $(".biography");
-    // let teducation = $(".education");
-    // let tawards = $(".awards");
-  
-    // $(biographybt).click(function () {
-    //   $(tbiography).removeClass("d-none");
-    //   $(teducation).addClass("d-none");
-    //   $(tawards).addClass("d-none");
-    //   $(this).css({ color: "#1e90ff" });
-    //   $(educationbt).css({ color: "black" });
-    //   $(awardsbt).css({ color: "black" });
-    // });
-  
-    // $(educationbt).click(function () {
-    //   $(tbiography).addClass("d-none");
-    //   $(teducation).removeClass("d-none");
-    //   $(tawards).addClass("d-none");
-    //   $(this).css({ color: "#1e90ff" });
-    //   $(biographybt).css({ color: "black" });
-    //   $(awardsbt).css({ color: "black" });
-    // });
-  
-    // $(awardsbt).click(function () {
-    //   $(tbiography).addClass("d-none");
-    //   $(teducation).addClass("d-none");
-    //   $(tawards).removeClass("d-none");
-    //   $(this).css({ color: "#1e90ff" });
-    //   $(biographybt).css({ color: "black" });
-    //   $(educationbt).css({ color: "black" });
-    // });
+    //#region Preloader
+    $("#preloader").fadeOut(800);
+    $(".preloader-bg").delay(800).fadeOut(800);
     //#endregion
 
 
