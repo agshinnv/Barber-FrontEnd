@@ -12,9 +12,21 @@ $(function() {
         }, 500); // 1000ms for the animation duration
     });
 
-    $(".navbar-toggler").click(function(){
-        $(".navbar-nav").removeClass("d-none")
+    // $(".navbar-toggler").click(function(){
+    //     $(".navbar-nav").removeClass("d-none")
+    //     $("#navbarCollapse").toggleClass("show");
+    // });
+
+    $(".navbar-toggler").click(function() {
+        // Toggle the 'show' class on the collapse div
         $("#navbarCollapse").toggleClass("show");
+
+        // Toggle the 'collapsed' class on the button
+        $(this).toggleClass("collapsed");
+
+        // Update aria-expanded attribute based on the button's state
+        var isExpanded = $(this).attr("aria-expanded") === "true";
+        $(this).attr("aria-expanded", !isExpanded);
     });
 
     //#region Preloader
@@ -223,6 +235,7 @@ $(function() {
         margin: 30,
         mouseDrag: true,
         autoplay: true,
+        autoplayTimeout: 1000,
         dots: false,
         nav: false,
         navText: ["<span class='lnr ti-angle-left'></span>", "<span class='lnr ti-angle-right'></span>"],
