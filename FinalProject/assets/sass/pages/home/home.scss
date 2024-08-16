@@ -2365,6 +2365,36 @@ body {
   }
 }
 
+@media screen and (max-width: 991px) {
+  #appointment{
+    .left-side{
+      visibility: hidden;
+    }
+  }
+  #history{
+    .main-image{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  #about{
+    .first-image, .second-image{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .booking-box {
+      margin-bottom: 90px;
+      padding: 35px 20px;
+      margin-left: -48px;
+      margin-top: 60px;
+  }
+}
+
 
 #colleagues {
   background: #91765a;
